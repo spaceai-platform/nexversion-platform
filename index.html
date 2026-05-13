@@ -27,23 +27,23 @@
 
         <nav class="nav-stack" aria-label="Primary">
           <a class="nav-item active" href="#">
-            <span class="nav-icon">⌘</span>
+            <span class="nav-icon">C</span>
             Command
           </a>
           <a class="nav-item" href="#">
-            <span class="nav-icon">◐</span>
+            <span class="nav-icon">W</span>
             Workflows
           </a>
           <a class="nav-item" href="#">
-            <span class="nav-icon">◇</span>
+            <span class="nav-icon">M</span>
             Memory
           </a>
           <a class="nav-item" href="#">
-            <span class="nav-icon">✦</span>
+            <span class="nav-icon">A</span>
             Agents
           </a>
           <a class="nav-item" href="#">
-            <span class="nav-icon">▣</span>
+            <span class="nav-icon">L</span>
             Library
           </a>
         </nav>
@@ -157,7 +157,7 @@
                   <span>Design synthesis</span>
                 </div>
                 <p>
-                  I’m restructuring the surface around three layers: navigation memory, active reasoning,
+                  I am restructuring the surface around three layers: navigation memory, active reasoning,
                   and live preview. Each layer gets distinct depth, rhythm, and priority.
                 </p>
                 <div class="insight-grid">
@@ -226,15 +226,17 @@
               </div>
 
               <div class="segmented-control" role="tablist" aria-label="Preview mode">
-                <button class="active" type="button" data-preview-mode="product">Product</button>
-                <button type="button" data-preview-mode="brief">Brief</button>
-                <button type="button" data-preview-mode="metrics">Metrics</button>
+                <button class="active" type="button" role="tab" aria-selected="true" data-preview-mode="product">
+                  Product
+                </button>
+                <button type="button" role="tab" aria-selected="false" data-preview-mode="brief">Brief</button>
+                <button type="button" role="tab" aria-selected="false" data-preview-mode="metrics">Metrics</button>
               </div>
 
               <div class="device-control" aria-label="Preview viewport">
-                <button class="active" type="button" data-device="desktop">Desktop</button>
-                <button type="button" data-device="tablet">Tablet</button>
-                <button type="button" data-device="mobile">Mobile</button>
+                <button class="active" type="button" aria-pressed="true" data-device="desktop">Desktop</button>
+                <button type="button" aria-pressed="false" data-device="tablet">Tablet</button>
+                <button type="button" aria-pressed="false" data-device="mobile">Mobile</button>
               </div>
 
               <div class="preview-stage" data-device-frame="desktop">

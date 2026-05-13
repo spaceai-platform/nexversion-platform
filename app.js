@@ -57,7 +57,17 @@ const promptInput = document.querySelector("#prompt");
 
 function setActiveButton(buttons, activeButton) {
   buttons.forEach((button) => {
-    button.classList.toggle("active", button === activeButton);
+    const isActive = button === activeButton;
+
+    button.classList.toggle("active", isActive);
+
+    if (button.hasAttribute("aria-selected")) {
+      button.setAttribute("aria-selected", String(isActive));
+    }
+
+    if (button.hasAttribute("aria-pressed")) {
+      button.setAttribute("aria-pressed", String(isActive));
+    }
   });
 }
 
