@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: #fbfaf7;
+  --foreground: #171717;
+  --surface: #ffffff;
+  --surface-subtle: #f7f5ef;
+  --muted: #f2f0eb;
+  --muted-foreground: #6d6a64;
+  --border: #e8e2d8;
+  --brand: #111111;
+  --brand-soft: #f8efe1;
+  --radius-card: 2rem;
+  --shadow-premium: 0 24px 80px rgba(20, 20, 22, 0.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-feature-settings:
+    "rlig" 1,
+    "calt" 1;
+}
+
+::selection {
+  background: #111111;
+  color: #ffffff;
+}
+
+.premium-grid {
+  background-image:
+    linear-gradient(rgba(23, 23, 23, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 23, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.premium-noise {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(23, 23, 23, 0.06) 1px, transparent 0);
+  background-size: 22px 22px;
+}
