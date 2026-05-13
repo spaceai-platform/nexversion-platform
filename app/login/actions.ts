@@ -16,7 +16,7 @@ function getSafeNext(formData: FormData) {
   return next;
 }
 
-function encodedRedirect(pathname: string, type: "error" | "success", message: string) {
+function encodedRedirect(pathname: string, type: "error" | "success", message: string): never {
   const params = new URLSearchParams({ [type]: message });
   redirect(`${pathname}?${params.toString()}`);
 }
@@ -88,9 +88,11 @@ export async function signInWithGoogle(formData: FormData) {
     }
   });
 
-  if (error || !data.url) {
+  const redirectUrl = data.url;
+
+  if (error || !redirectUrl) {
     encodedRedirect("/login", "error", error?.message || "Could not start Google sign in.");
   }
 
-  redirect(data.url);
+  redirect(redirectUrl);
 }
