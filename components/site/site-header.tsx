@@ -28,25 +28,25 @@ export function SiteHeader() {
 
         <nav className="hidden items-center gap-7 lg:flex">
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.href}
               href={item.href}
               className="text-sm font-medium text-neutral-600 transition hover:text-neutral-950"
             >
               {item.label}
-            </Link>
+            </a>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
           <Button asChild variant="ghost" className="hidden sm:inline-flex">
-            <Link href="#architecture">View system</Link>
+            <a href="#architecture">View system</a>
           </Button>
           <Button asChild>
-            <Link href="#workspace">
+            <a href="#workspace">
               Start building
               <ArrowRight className="size-4" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

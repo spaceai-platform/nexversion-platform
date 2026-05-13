@@ -1,5 +1,4 @@
 import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
@@ -23,10 +22,10 @@ export function CtaSection() {
             </p>
           </div>
           <Button asChild size="lg" variant="premium">
-            <Link href="#workspace">
+            <a href="#workspace">
               Open workspace
               <ArrowRight className="size-4" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>
