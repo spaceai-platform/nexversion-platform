@@ -10,10 +10,37 @@ import {
 } from "lucide-react";
 
 import type {
-  GenerationModule,
+  ArchitectureFolderGroup,
+  FoundationPrinciple,
   PlatformPillar,
-  WorkspaceStep,
 } from "@/types/platform";
+
+export const architectureFolderGroups: ArchitectureFolderGroup[] = [
+  {
+    path: "app/",
+    role: "Routes, layouts, metadata, API endpoints, and server-first entrypoints.",
+  },
+  {
+    path: "components/layout/",
+    role: "Reusable shell, container, section, and heading wrappers.",
+  },
+  {
+    path: "components/ui/",
+    role: "Reusable primitives for buttons, cards, badges, forms, and modals.",
+  },
+  {
+    path: "features/",
+    role: "Domain-owned product capabilities with local data, state, and UI.",
+  },
+  {
+    path: "lib/",
+    role: "Framework adapters, AI clients, Supabase factories, and utilities.",
+  },
+  {
+    path: "types/",
+    role: "Shared contracts that keep generated systems typed end to end.",
+  },
+];
 
 export const platformPillars: PlatformPillar[] = [
   {
@@ -46,62 +73,7 @@ export const platformPillars: PlatformPillar[] = [
   },
 ];
 
-export const workspaceSteps: WorkspaceStep[] = [
-  {
-    label: "Brief",
-    status: "complete",
-    detail: "Audience, wedge, monetization, and success metric captured.",
-  },
-  {
-    label: "Architecture",
-    status: "active",
-    detail: "Next.js routes, modules, Supabase schema, and auth policies drafted.",
-  },
-  {
-    label: "Build",
-    status: "queued",
-    detail: "Generate app shell, shadcn components, and integration seams.",
-  },
-  {
-    label: "Beautify",
-    status: "queued",
-    detail: "Run premium UI pass across hierarchy, spacing, states, and tone.",
-  },
-  {
-    label: "Deploy",
-    status: "queued",
-    detail: "Provision Vercel preview, validate env, and prepare launch checklist.",
-  },
-];
-
-export const generationModules: GenerationModule[] = [
-  {
-    name: "Product blueprint",
-    description: "Founder problem, ICP, activation path, pricing, and core screens.",
-    accent: "bg-neutral-950",
-    items: ["ICP brief", "Feature map", "Success metrics"],
-  },
-  {
-    name: "System architecture",
-    description: "Route groups, feature modules, services, data access, and API contracts.",
-    accent: "bg-sky-500",
-    items: ["Clean folders", "Typed contracts", "Server actions"],
-  },
-  {
-    name: "Data and auth",
-    description: "Supabase schema, RLS policies, onboarding, organizations, and roles.",
-    accent: "bg-emerald-500",
-    items: ["Tables", "Policies", "Sessions"],
-  },
-  {
-    name: "Make It Beautiful",
-    description: "Refinement engine for premium SaaS polish, responsive states, and copy.",
-    accent: "bg-amber-500",
-    items: ["Visual rhythm", "Empty states", "Investor-grade polish"],
-  },
-];
-
-export const foundationPrinciples = [
+export const foundationPrinciples: FoundationPrinciple[] = [
   {
     title: "Feature-first modules",
     description:

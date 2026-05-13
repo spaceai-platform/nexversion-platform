@@ -3,9 +3,9 @@
 Nexversion is an AI software creation platform foundation for generating,
 refining, authenticating, deploying, and scaling modern SaaS applications.
 
-This first implementation establishes a clean Next.js architecture, a premium
-light UI direction, shadcn-style component primitives, and integration seams for
-OpenAI, Supabase, and Vercel.
+This implementation establishes a scalable Next.js architecture, a premium
+light design system, shadcn-style component primitives, feature-owned data/state,
+and integration seams for OpenAI, Supabase, and Vercel.
 
 ## Stack
 
@@ -21,15 +21,30 @@ OpenAI, Supabase, and Vercel.
 
 ```txt
 app/                         Route tree, layouts, API endpoints
-components/ui/               Reusable shadcn-style primitives
-components/marketing/        Shared marketing/presentation components
-components/site/             Global shell components
-features/ai-workspace/       AI generation and refinement workspace UI
-features/platform/           Platform architecture data and sections
+components/layout/           Container, section, heading, and page shell wrappers
+components/site/             Global navigation and shell-level components
+components/ui/               Buttons, badges, cards, forms, modals, stats
+config/                      Navigation and app-level constants
+features/ai-workspace/       Workspace UI, content data, and reducer state
+features/landing/            Route composition for the marketing landing page
+features/platform/           Architecture sections and platform content
+features/refinement/         Make It Beautiful content and UI
 lib/ai/                      OpenAI client factory and prompt contracts
 lib/supabase/                Supabase browser/admin client factories
 types/                       Shared product/platform contracts
 ```
+
+## UI system
+
+- Layout rhythm flows through `Container`, `Section`, `SectionHeading`, and
+  `SiteShell`.
+- Core variants live in reusable primitives: `Button`, `Badge`, `Card`,
+  `Input`, `Textarea`, `Field`, `Modal`, and `StatCard`.
+- Feature components consume domain data from colocated `data/` folders instead
+  of embedding repeated content arrays in JSX.
+- Workspace state is prepared in `features/ai-workspace/state/workspace-store.ts`
+  as a reducer contract that can back future client interactions without
+  coupling UI to API implementation details.
 
 ## Platform direction
 

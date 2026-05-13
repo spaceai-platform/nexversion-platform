@@ -1,6 +1,8 @@
 import { Check, Sparkles } from "lucide-react";
 
-import { SectionHeading } from "@/components/marketing/section-heading";
+import { Container } from "@/components/layout/container";
+import { Section } from "@/components/layout/section";
+import { SectionHeading } from "@/components/layout/section-heading";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -8,32 +10,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-const refinementSignals = [
-  "Hero hierarchy tightened for sub-8 second comprehension.",
-  "Dashboard density reduced while preserving founder control.",
-  "Empty states rewritten with confident, helpful microcopy.",
-  "Mobile layout converted from stacked afterthought to primary flow.",
-  "Trust cues added near auth, billing, data, and deployment moments.",
-];
-
-const previewCards = [
-  {
-    title: "Before",
-    tone: "Busy builder output",
-    points: ["Generic cards", "Mixed spacing", "Weak CTA"],
-  },
-  {
-    title: "After",
-    tone: "Premium SaaS surface",
-    points: ["Calm rhythm", "Clear conversion path", "Responsive polish"],
-  },
-];
+import {
+  refinementPreviewCards,
+  refinementSignals,
+} from "@/features/refinement/data/refinement-content";
 
 export function RefinementSection() {
   return (
-    <section id="refinement" className="py-20 sm:py-28">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <Section id="refinement">
+      <Container>
         <SectionHeading
           align="center"
           eyebrow="Make It Beautiful"
@@ -60,7 +45,7 @@ export function RefinementSection() {
               </div>
 
               <div className="mt-6 grid gap-4 md:grid-cols-2">
-                {previewCards.map((card) => (
+                {refinementPreviewCards.map((card) => (
                   <div
                     key={card.title}
                     className="rounded-[1.35rem] border border-neutral-200 bg-[#fbfaf7]/90 p-5"
@@ -105,7 +90,7 @@ export function RefinementSection() {
             </CardContent>
           </Card>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

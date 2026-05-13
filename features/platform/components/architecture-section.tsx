@@ -1,6 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 
-import { SectionHeading } from "@/components/marketing/section-heading";
+import { Container } from "@/components/layout/container";
+import { Section } from "@/components/layout/section";
+import { SectionHeading } from "@/components/layout/section-heading";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -9,42 +11,23 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { foundationPrinciples, platformPillars } from "@/features/platform/data";
-
-const folderGroups = [
-  {
-    path: "app/",
-    role: "Routes, layouts, metadata, and server-first entrypoints.",
-  },
-  {
-    path: "components/ui/",
-    role: "Reusable shadcn-style primitives with a stable design API.",
-  },
-  {
-    path: "features/",
-    role: "Product capabilities grouped by domain: workspace, platform, auth.",
-  },
-  {
-    path: "lib/",
-    role: "Framework adapters, AI clients, Supabase factories, and utilities.",
-  },
-  {
-    path: "types/",
-    role: "Shared contracts that keep generated systems typed end to end.",
-  },
-];
+import {
+  architectureFolderGroups,
+  foundationPrinciples,
+  platformPillars,
+} from "@/features/platform/data/architecture-content";
 
 export function ArchitectureSection() {
   return (
-    <section id="architecture" className="py-20 sm:py-28">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <Section id="architecture">
+      <Container>
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
           <SectionHeading
             eyebrow="Clean architecture"
             title="A scalable foundation for generated software."
             description="The platform starts with clear seams between product UI, AI orchestration, generated artifacts, Supabase access, and deployment workflows."
           />
-          <Card className="p-2">
+          <Card variant="dark" className="p-2">
             <div className="rounded-[1.5rem] bg-neutral-950 p-5 text-white">
               <div className="flex items-center justify-between">
                 <p className="text-sm font-medium text-neutral-300">
@@ -53,7 +36,7 @@ export function ArchitectureSection() {
                 <ArrowUpRight className="size-4 text-neutral-400" />
               </div>
               <div className="mt-5 space-y-3">
-                {folderGroups.map((group) => (
+                {architectureFolderGroups.map((group) => (
                   <div
                     key={group.path}
                     className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
@@ -106,7 +89,7 @@ export function ArchitectureSection() {
             </Card>
           ))}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }
