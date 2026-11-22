@@ -1,0 +1,240 @@
+{
+  "version": "2026-11-23",
+  "type": "original-programme-specification",
+  "state": "PREVIEW_ONLY_NOT_FULL_LESSONS",
+  "durationDays": 28,
+  "access": "Requires account and a verified active paid subscription. Client previews never confer access.",
+  "prerequisite": "Complete foundation or pass an equivalent diagnostic, subject to future server-side implementation.",
+  "tracks": [
+    {
+      "slug": "business",
+      "name": "AI for Business",
+      "icon": "◈",
+      "category": "BUSINESS",
+      "tagline": "Build smarter operations, decisions and customer experiences.",
+      "audience": "Founders, managers and small-business teams",
+      "outcome": "A documented AI operating playbook with three measurable workflow improvements.",
+      "tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Sheets",
+        "Perplexity"
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "theme": "Find business opportunities",
+          "practice": "Map repetitive tasks, customer bottlenecks and high-value decisions",
+          "milestone": "Business AI opportunity map",
+          "dayRange": "Days 1–7"
+        },
+        {
+          "week": 2,
+          "theme": "Improve decisions and service",
+          "practice": "Research competitors, summarise customer insight and draft support workflows",
+          "milestone": "Evidence-backed decision brief",
+          "dayRange": "Days 8–14"
+        },
+        {
+          "week": 3,
+          "theme": "Build the business system",
+          "practice": "Create sales, service and operations prompts with human review checkpoints",
+          "milestone": "Operating playbook with 3 workflows",
+          "dayRange": "Days 15–21"
+        },
+        {
+          "week": 4,
+          "theme": "Prove business impact",
+          "practice": "Run a small pilot, record time saved and define risk controls",
+          "milestone": "30-day improvement plan and results dashboard",
+          "dayRange": "Days 22–28"
+        }
+      ]
+    },
+    {
+      "slug": "automation",
+      "name": "AI Automation & Agents",
+      "icon": "⌘",
+      "category": "AUTOMATION",
+      "tagline": "Connect tools and automate repeatable work responsibly.",
+      "audience": "Professionals, operations teams and creators",
+      "outcome": "A tested, documented multi-step automation with rollback and human approval.",
+      "tools": [
+        "Zapier",
+        "Make",
+        "n8n",
+        "OpenAI",
+        "Sheets"
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "theme": "Map a reliable workflow",
+          "practice": "Define triggers, inputs, outputs, failure conditions and approvals",
+          "milestone": "Automation architecture diagram",
+          "dayRange": "Days 1–7"
+        },
+        {
+          "week": 2,
+          "theme": "Build and test integrations",
+          "practice": "Use webhooks, structured data and no-code branches",
+          "milestone": "Working sandbox workflow",
+          "dayRange": "Days 8–14"
+        },
+        {
+          "week": 3,
+          "theme": "Add AI with safeguards",
+          "practice": "Implement validation, retries, prompt injection resistance and manual review",
+          "milestone": "Human-in-the-loop AI workflow",
+          "dayRange": "Days 15–21"
+        },
+        {
+          "week": 4,
+          "theme": "Launch and monitor",
+          "practice": "Measure reliability, costs and errors; document a recovery plan",
+          "milestone": "Demo, runbook and monitoring checklist",
+          "dayRange": "Days 22–28"
+        }
+      ]
+    },
+    {
+      "slug": "content",
+      "name": "AI Content & Marketing",
+      "icon": "✳",
+      "category": "CREATIVE",
+      "tagline": "Create compelling campaigns with consistent brand voice.",
+      "audience": "Marketers, entrepreneurs and content creators",
+      "outcome": "A cohesive, original campaign with copy, visuals, measurement and disclosure notes.",
+      "tools": [
+        "ChatGPT",
+        "Canva",
+        "Gemini",
+        "CapCut",
+        "Analytics"
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "theme": "Understand the audience",
+          "practice": "Define positioning, channel choices and a responsible content brief",
+          "milestone": "Audience and campaign strategy",
+          "dayRange": "Days 1–7"
+        },
+        {
+          "week": 2,
+          "theme": "Make brand-ready assets",
+          "practice": "Develop editorial copy, social templates and accessible visual concepts",
+          "milestone": "Campaign asset library",
+          "dayRange": "Days 8–14"
+        },
+        {
+          "week": 3,
+          "theme": "Publish and experiment",
+          "practice": "Create landing-page concepts, A/B tests and review workflows",
+          "milestone": "Seven-piece content calendar",
+          "dayRange": "Days 15–21"
+        },
+        {
+          "week": 4,
+          "theme": "Measure and refine",
+          "practice": "Analyse campaign results and revise the narrative",
+          "milestone": "Portfolio campaign with performance review",
+          "dayRange": "Days 22–28"
+        }
+      ]
+    },
+    {
+      "slug": "career",
+      "name": "AI for Work & Careers",
+      "icon": "↗",
+      "category": "CAREER",
+      "tagline": "Use AI to improve applications, communication and everyday output.",
+      "audience": "Job seekers, students and working professionals",
+      "outcome": "An evidence-based career portfolio with an interview practice plan.",
+      "tools": [
+        "ChatGPT",
+        "Claude",
+        "Perplexity",
+        "Docs",
+        "Sheets"
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "theme": "Clarify your direction",
+          "practice": "Identify career goals, skills gaps and ethical AI use",
+          "milestone": "Skills inventory and learning map",
+          "dayRange": "Days 1–7"
+        },
+        {
+          "week": 2,
+          "theme": "Prepare application assets",
+          "practice": "Improve role-specific resumes and truthful achievement stories",
+          "milestone": "Tailored CV and cover letter",
+          "dayRange": "Days 8–14"
+        },
+        {
+          "week": 3,
+          "theme": "Practise real work",
+          "practice": "Plan meetings, research and write with source verification",
+          "milestone": "Work sample portfolio",
+          "dayRange": "Days 15–21"
+        },
+        {
+          "week": 4,
+          "theme": "Interview and progress",
+          "practice": "Run structured mock interviews and define a personal development plan",
+          "milestone": "Interview scorecard and 30-day action plan",
+          "dayRange": "Days 22–28"
+        }
+      ]
+    },
+    {
+      "slug": "entrepreneurship",
+      "name": "AI Entrepreneurship",
+      "icon": "◇",
+      "category": "VENTURES",
+      "tagline": "Validate a real customer problem before investing in a venture.",
+      "audience": "Aspiring founders and side-business builders",
+      "outcome": "A grounded venture brief, customer validation evidence and pilot plan.",
+      "tools": [
+        "ChatGPT",
+        "Perplexity",
+        "Canva",
+        "Sheets",
+        "Forms"
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "theme": "Find a genuine problem",
+          "practice": "Interview potential customers and distinguish pain from interest",
+          "milestone": "Problem statement and interview guide",
+          "dayRange": "Days 1–7"
+        },
+        {
+          "week": 2,
+          "theme": "Test the business case",
+          "practice": "Compare alternatives, estimate costs and define pricing assumptions",
+          "milestone": "Competitor matrix and unit economics",
+          "dayRange": "Days 8–14"
+        },
+        {
+          "week": 3,
+          "theme": "Prototype a solution",
+          "practice": "Create a simple offer, landing page and human-reviewed sales copy",
+          "milestone": "Minimum viable offer",
+          "dayRange": "Days 15–21"
+        },
+        {
+          "week": 4,
+          "theme": "Run a small pilot",
+          "practice": "Collect feedback, measure outcomes and decide to iterate or stop",
+          "milestone": "Pilot report and investment decision",
+          "dayRange": "Days 22–28"
+        }
+      ]
+    }
+  ]
+}

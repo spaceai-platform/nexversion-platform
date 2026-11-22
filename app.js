@@ -34,4 +34,34 @@
     weeks.forEach((title,i)=>{const b=document.createElement('button');b.type='button';b.dataset.week=String(i+1);b.setAttribute('role','tab');b.setAttribute('aria-selected','false');b.textContent='Week '+(i+1);b.title=title;b.addEventListener('click',()=>showWeek(i+1));tabs.append(b)});
     showWeek(1);
   }).catch(()=>{grid.textContent='The programme preview is temporarily unavailable. Please try again.';});
+
+  const pathCards=document.getElementById('pathCards'),pathModules=document.getElementById('pathModules');
+  function renderPath(track) {
+    document.getElementById('pathName').textContent=track.name;
+    document.getElementById('pathTagline').textContent=track.tagline;
+    document.getElementById('pathAudience').textContent=track.audience;
+    document.getElementById('pathOutcome').textContent=track.outcome;
+    pathModules.replaceChildren();
+    for (const week of track.weeks) {
+      const li=document.createElement('li'),num=document.createElement('span'),content=document.createElement('div'),name=document.createElement('strong'),desc=document.createElement('small');
+      num.className='path-module-num';num.textContent=String(week.week).padStart(2,'0');
+      name.textContent=week.theme;desc.textContent=week.dayRange+' · '+week.practice+' · Deliverable: '+week.milestone;
+      content.append(name,desc);li.append(num,content);pathModules.append(li);
+    }
+    for (const card of pathCards.querySelectorAll('button[data-track]')) card.setAttribute('aria-pressed',String(card.dataset.track===track.slug));
+  }
+  fetch('./advanced-pathways.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Advanced pathways unavailable');return r.json()}).then(data=>{
+    if(!Array.isArray(data.tracks)||data.tracks.length!==5||data.tracks.some(t=>t.weeks.length!==4))throw Error('Invalid pathway outline');
+    for (const track of data.tracks) {
+      const card=document.createElement('button');card.type='button';card.className='path-card';card.dataset.track=track.slug;card.setAttribute('aria-pressed','false');
+      const ico=document.createElement('span');ico.className='path-card-icon';ico.textContent=track.icon;
+      const info=document.createElement('span');info.className='path-card-info';
+      const cat=document.createElement('span');cat.className='path-card-tag';cat.textContent=track.category;
+      const title=document.createElement('strong');title.className='path-card-title';title.textContent=track.name;
+      const tag=document.createElement('span');tag.className='path-card-subtitle';tag.textContent=track.tagline;
+      info.append(cat,title,tag);const arrow=document.createElement('span');arrow.className='path-card-arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent='›';
+      card.append(ico,info,arrow);card.addEventListener('click',()=>renderPath(track));pathCards.append(card);
+    }
+    renderPath(data.tracks[0]);
+  }).catch(()=>{pathCards.textContent='Advanced pathway previews are temporarily unavailable.'});
 })();

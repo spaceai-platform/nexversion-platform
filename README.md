@@ -16,6 +16,13 @@
 - `curriculum/qa-register.csv`: instructional and production QA register. All initial statuses remain **NOT VERIFIED**.
 - `scripts/verify.mjs`: automated structural validation.
 
+## Post-foundation expansion (2026-11-23)
+- `advanced-pathways.json`: 5 original specialised 28-day **preview** pathways (AI for Business, Automation & Agents, Content & Marketing, Work & Careers, Entrepreneurship).
+- Each pathway has 4 weeks, a defined target learner, a deliverable per week, and a portfolio capstone.
+- `index.html` + `app.js` + `styles.css`: preview cards and accessible selectable module detail, plus a transparent retention/progression section.
+- **NOT complete production courses:** full instructional scripts, media, tutor support, quizzes, projects, rubric scoring and certificate eligibility need backend development and QA before launch.
+- **No change** to existing Stripe processing, entitlements or live Nexversion site. This repo is a separate static reference and is not linked to the deployed Sites source. Never expose these client-side previews as protected content.
+
 ## Deployment and payment state
 
 This repository is **not the same source tree as the previously deployed ChatGPT Sites site** at `https://nexversion.affirmationukltd.chatgpt.site/`. This commit does **not** update that live site.
