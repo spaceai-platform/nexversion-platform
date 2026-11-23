@@ -2,6 +2,10 @@ import {readFileSync} from 'node:fs';import assert from 'node:assert/strict';
 const d=JSON.parse(readFileSync(new URL('../course-outline.json',import.meta.url)));
 assert.equal(d.lessons.length,28);assert.equal(d.weeks.length,4);
 for(let i=0;i<28;i++){const l=d.lessons[i];assert.equal(l.day,i+1);assert.equal(l.week,Math.floor(i/7)+1);for(const k of ['title','objective','tools'])assert.ok(l[k]&&l[k].length>4,'Missing '+k+' at day '+l.day);}
+assert.equal(d.course_minutes,420); assert.equal(d.daily_minutes,15);
+assert.deepEqual(d.learning_sequence.map(x=>x.minutes),[3,7,3,2]);
+assert.deepEqual(d.learning_sequence.map(x=>x.label),['Watch the video','Continue to practice','Get AI tutor feedback','Complete the module']);
+for(const l of d.lessons){assert.equal(l.duration,15);assert.equal(l.video_status,'script_and_media_pending');assert.ok(l.exercise.length>25&&l.tutor_guidance.length>25&&l.check.length>15);}
 const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
 assert.ok(html.includes('disabled title="Checkout is not yet configured"'));assert.ok(html.includes('subscriber-only'));
 const adv=JSON.parse(readFileSync(new URL('../advanced-pathways.json',import.meta.url)));

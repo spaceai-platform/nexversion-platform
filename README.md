@@ -16,6 +16,13 @@
 - `curriculum/qa-register.csv`: instructional and production QA register. All initial statuses remain **NOT VERIFIED**.
 - `scripts/verify.mjs`: automated structural validation.
 
+## Curriculum update — November 23, 2026
+- The Practical AI Foundations outline follows the approved source document: 28 modules × 15 minutes (7 hours).
+- Each module sequence: Watch the video (3 minutes) → Continue to practice (7 minutes) → AI tutor feedback (3 minutes) → Complete the module (2 minutes).
+- The 28 revised titles and practices are included in `course-outline.json` with tutor guidance and knowledge checks.
+- Videos, captions, transcripts, tutor integration and assessments are **not produced or activated by this commit**. They must be created, reviewed and served only via secure paid access. Never mark a learner complete just for viewing the public outline.
+- Navigation policy specifies Previous, Back to course and Save and exit without forcing completion to go backwards.
+
 ## Post-foundation expansion (2026-11-23)
 - `advanced-pathways.json`: 5 original specialised 28-day **preview** pathways (AI for Business, Automation & Agents, Content & Marketing, Work & Careers, Entrepreneurship).
 - Each pathway has 4 weeks, a defined target learner, a deliverable per week, and a portfolio capstone.
